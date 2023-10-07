@@ -38,9 +38,9 @@ func (list *LinkedList) addRange(values []string) {
 		lastCell = lastCell.next
 	}
 
-	// adding the new cells after the last cell
 	for _, value := range values {
 		lastCell.addAfter(&Cell{value, nil})
+		lastCell = lastCell.next
 	}
 }
 
